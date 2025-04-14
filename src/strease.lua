@@ -59,4 +59,21 @@ function strease.count(s, sub)
     return count
 end
 
+-- Find a given substring within a string
+function strease.contains(s, sub)
+    return s:find(sub, 1, true) ~= nil
+end
+
+-- "^%s*$" essentially means “the whole string consists of zero or more spaces”
+function strease.is_empty(s)
+    return s:match("^%s*$") ~= nil
+end
+
+-- Reverse a string
+function strease.reverse(s)
+    return s:reverse()
+end
+
+
+
 return strease

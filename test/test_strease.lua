@@ -29,6 +29,12 @@ check("Replace 'world' with 'Lua' in 'hello world'", strease.replace("hello worl
 check("Join {'apple', 'banana', 'cherry'} with ', '", strease.join({"apple", "banana", "cherry"}, ", "), "apple, banana, cherry")
 check("Lowercase 'HELLO'", strease.lower("HELLO"), "hello")
 check("Uppercase 'hello'", strease.upper("hello"), "HELLO")
+check("Reversing 'apple' into elppa", strease.reverse("apple"), "elppa")
+print("Check if given string contains 'banana' should be true: ", strease.contains("apple,banana,cherry", "banana"))
+print("Check if given string contains 'orange' should be false:", strease.contains("apple,banana,cherry", "orange"))
+print("Check if given string is empty, should be false:", strease.is_empty("testString"))
+print("Check if given string is empty, should be true: ", strease.is_empty(""))
+print("Check if given string is empty (with a space), should be true:", strease.is_empty(" "))
 
 -- Test some boolean stuff
 check("Does 'hello world' start with 'hello'?", strease.startswith("hello world", "hello"), true)
